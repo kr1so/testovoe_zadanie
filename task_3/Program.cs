@@ -15,7 +15,7 @@ FillRandomArray(arrayA);
 PrintArray(arrayA);
 int count = arrayA.Length;
 int[] arrayB = new int [count];
-int[] EqualityThree(int[] array, int[] array1){
+int[] PositiveNumbers(int[] array, int[] array1){
     int j = 0;
     for (int i = 0; i < array.Length; i++){
             if (array[i] >= 0){
@@ -26,5 +26,5 @@ int[] EqualityThree(int[] array, int[] array1){
         }
             return array1;
     }
-EqualityThree(arrayA, arrayB);
+PositiveNumbers(arrayA, arrayB);
 PrintArray(arrayB);

@@ -1,7 +1,6 @@
 ﻿int[] arrayA = new int[100];
 int[] arrayB = new int[100];
-string FillRandomArray(int[] array1, int[] array2)
-{
+string FillRandomArray(int[] array1, int[] array2){
     string x = string.Empty;
     System.Console.WriteLine($"Первый список: ");
     for (int i = 0; i < array1.Length; i++){
