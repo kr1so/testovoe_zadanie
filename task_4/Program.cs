@@ -1,9 +1,4 @@
-﻿// 2. Задача 
-// 1. Алгоритм, заполняющий список произвольными целыми чистыми. 
-// Получить новый список из элементов исходного, которые удовлетворяют условиям
-// Элемент не кратен 2
-
-int[] arrayA = new int[10];
+﻿int[] arrayA = new int[10];
 int[] FillRandomArray(int[] array1)
 {
     for (int i = 0; i < array1.Length; i++){
@@ -16,18 +11,24 @@ void PrintArray(int[] arrayPrint)
     for (int i = 0; i < arrayPrint.Length; i++){
         Console.Write($"{arrayPrint[i]} ");
     }
+    System.Console.WriteLine();
 }
 FillRandomArray(arrayA);
 PrintArray(arrayA);
-// Новый список из элементов исходного, который удовлетворяют условию
-// Элемент не кратен 2
-int EqualityThree(int[] array)
-{
+int count = arrayA.Length;
+int[] arrayB = new int [count];
+int[] EqualityThree(int[] array, int[] array2){
+    int j = 0;
     for (int i = 0; i < array.Length; i++){
-        if (array[i] ! % 2 == 0) return array[i];
+       
+            if (~ array[i]%2 == 0){
+                array2[j] = array[i];
+                j++;
+            }
+            array[i]++;
+        }
+            return array2;
     }
-    return 0;
-}
-System.Console.WriteLine(EqualityThree(arrayA));
-System.Console.WriteLine();
-PrintArray(arrayA);
+EqualityThree(arrayA, arrayB);
+PrintArray(arrayB);
+
